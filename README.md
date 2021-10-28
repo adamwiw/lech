@@ -1,0 +1,2 @@
+# lech
+ dla panasa
