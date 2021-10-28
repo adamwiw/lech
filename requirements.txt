@@ -12,6 +12,7 @@ hyperframe==6.0.1
 idna==3.3
 kaitaistruct==0.9
 outcome==1.1.0
+packaging==21.0
 pyasn1==0.4.8
 pycparser==2.20
 pydivert==2.1.0
