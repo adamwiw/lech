@@ -1,5 +1,6 @@
 from argparse import ArgumentParser, Namespace
 from datetime import datetime
+from time import sleep
 
 from dateutil.relativedelta import relativedelta
 
@@ -27,3 +28,4 @@ if __name__ == "__main__":
     lech.accept_cookies()
     lech.age_verification(day=day, month=month, year=year)
     lech.play()
+    sleep(3)

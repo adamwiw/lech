@@ -1,4 +1,4 @@
-from selenium.webdriver import Chrome
+from seleniumwire.webdriver import Chrome
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 
