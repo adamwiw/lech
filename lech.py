@@ -24,3 +24,11 @@ class Lech:
         for key in elements:
             elements[key].clear()
             elements[key].send_keys(birthday[key])
+        button = self.__chrome.find_element(By.NAME, 'age_verify[enter]')
+        button.click()
+
+    def play(self) -> None:
+        button = self.__chrome.find_element(By.ID, 'btn__main-quiz-start')
+        button.click()
+        button = self.__chrome.find_element(By.CSS_SELECTOR, 'a[data-txt="Graj"]')
+        button.click()

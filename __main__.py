@@ -26,3 +26,4 @@ if __name__ == "__main__":
     lech = Lech()
     lech.accept_cookies()
     lech.age_verification(day=day, month=month, year=year)
+    lech.play()
