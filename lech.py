@@ -34,7 +34,8 @@ def save_question(previous: Request, current: Request) -> Request:
         labels = soup.find_all('label', 'quiz__choice')
         correct_answer = list(filter(lambda i: i.find('input', {'value': should_select}) is not None, labels))
         answer = correct_answer[0].find('span').text
-        Question.update(question=question, answers=answers, answer=answer, upsert=True)
+        if not len(Question.objects(question=question)):
+            Question(question=question, answers=answers, answer=answer).save()
     return current
 
 
