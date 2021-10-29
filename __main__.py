@@ -3,6 +3,7 @@ from datetime import datetime
 from time import sleep
 
 from dateutil.relativedelta import relativedelta
+from mongoengine import connect
 
 from argument_validation import validate_day, validate_month, validate_year
 from lech import Lech
@@ -24,8 +25,11 @@ if __name__ == "__main__":
     birthday = datetime(year, month, day)
     if relativedelta(datetime.now(), birthday).years < 18:
         exit('Not old enough')
+    connect('lech')
     lech = Lech()
     lech.accept_cookies()
     lech.age_verification(day=day, month=month, year=year)
     lech.play()
-    sleep(3)
+    while True:
+        sleep(60)
+        lech.save_questions()

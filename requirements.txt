@@ -1,5 +1,6 @@
 async-generator==1.10
 attrs==21.2.0
+beautifulsoup4==4.10.0
 blinker==1.4
 Brotli==1.0.9
 certifi==2021.10.8
@@ -11,11 +12,13 @@ hpack==4.0.0
 hyperframe==6.0.1
 idna==3.3
 kaitaistruct==0.9
+mongoengine==0.23.1
 outcome==1.1.0
 packaging==21.0
 pyasn1==0.4.8
 pycparser==2.20
 pydivert==2.1.0
+pymongo==3.12.1
 pyOpenSSL==21.0.0
 pyparsing==3.0.3
 PySocks==1.7.1
@@ -25,6 +28,7 @@ selenium-wire==4.5.4
 six==1.16.0
 sniffio==1.2.0
 sortedcontainers==2.4.0
+soupsieve==2.2.1
 trio==0.19.0
 trio-websocket==0.9.2
 urllib3==1.26.7
