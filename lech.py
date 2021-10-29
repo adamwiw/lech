@@ -71,3 +71,9 @@ class Lech:
     def save_questions(self):
         requests = list(filter(request_filter, self.__chrome.requests))
         reduce(save_question, requests)
+
+    def restart(self):
+        button = self.__chrome.find_element(By.CLASS_NAME, 'btn-start-quiz-in-warmup')
+        button.click()
+        button = self.__chrome.find_element(By.CSS_SELECTOR, 'a[data-txt="Graj"]')
+        button.click()

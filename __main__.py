@@ -33,3 +33,4 @@ if __name__ == "__main__":
     while True:
         sleep(60)
         lech.save_questions()
+        lech.restart()
